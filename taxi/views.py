@@ -25,6 +25,7 @@ class ManufacturerListView(generic.ListView):
 class CarListView(generic.ListView):
     model = Car
     queryset = Car.objects.select_related("manufacturer")
+    paginate_by = 5
 
 
 class CarDetailView(generic.DetailView):
